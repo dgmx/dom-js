@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../10-DOM/css/estilo.css">
+    <title>Funciones</title>
+</head>
+
+<body>
+    <h2>Funciones JavaScript. Multiplicacion</h2>
+    <p>Llamada a una funcion con argumentos </p>
+
+    <!-- Text input-->
+
+        <label for="num1">Number A:</label>
+            <input id="num1" name="num1" type="text" placeholder="operador" >
+            <p></p>
+
+    <!-- Text input-->
+   
+        <label  for="num2">Number B:</label>
+            <input id="num2" name="num2" type="text" placeholder="operador" >
+            <p></p>
+            
+    <!-- Button -->
+    
+        <label for="singlebutton"></label>
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary"
+                onclick="calculadora();">Calcular</button>
+       
+    <p id="demo" class="resultado"></p>
+    <p id="demo2" class="ok"></p>
+
+    <script>
+
+        function calculadora() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(num1) ||  isNaN(num2)) {
+                text = "Type mismatch";
+                calculo = "ERROR";
+                document.getElementById('demo2').style.backgroundColor='red';
+               
+            } else {
+                text = "Input OK";
+                calculo = num1 * num2;
+            }
+            
+           
+
+            document.getElementById('demo').style.visibility='visible';
+            document.getElementById('demo2').style.visibility='visible';
+
+            document.getElementById("demo").innerHTML = calculo;
+            document.getElementById("demo2").innerHTML = text;
+            console.log(calculo);
+            setInterval("location.reload()",5000);
+        }
+
+    </script>
+
+</body>
+
+</html>
