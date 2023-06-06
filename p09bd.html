@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documento Eventos CSS </title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+
+    <body onload="checkCookies()">
+        <h2>JavaScript Eventos HTML DOM P2</h2>
+        <p id="demo"></p>
+        <div id="mouse" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div><br>
+        
+       <div id="mouseb" onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
+
+
+
+        <script>
+            function checkCookies() {
+               let text = "";
+                if (navigator.cookieEnabled == true) {
+                    text = "Cookies activas.";
+                } else {
+                    text = "Cookies NO activas.";
+                }
+                document.getElementById("demo").innerHTML = text;
+                console.log(text);
+            }
+            function mOver(obj) {
+                obj.innerHTML = "Thank You"
+                obj.style.backgroundColor='blue';
+            }
+
+            function mOut(obj) {
+                obj.innerHTML = "Mouse Over Me"
+                obj.style.backgroundColor='#D94A38';
+            }
+           
+            function mDown(obj) {
+                obj.style.backgroundColor = "#1ec5e5";
+                obj.innerHTML = "Release Me";
+                }
+
+            function mUp(obj) {
+                obj.style.backgroundColor="#D94A38";
+                obj.innerHTML="Thank You";
+            }
+
+        </script>
+
+
+
+    </body>
+
+</html>

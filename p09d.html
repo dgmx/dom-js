@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Eventos CSS </title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+
+  <body>
+    <h2>JavaScript Eventos HTML DOM</h2>
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+
+      <h1 onclick="changeText(this)">Haga click en este texto</h1>
+
+
+
+      <script>
+        function changeText(id) {
+          id.innerHTML = "Gracias Por hacer click!";
+
+        }
+      </script>
+
+      <button onclick="displayDate()">Horario</button>
+
+      <script>
+        function displayDate() {
+          document.getElementById("demo").innerHTML = Date();
+        }
+      </script>
+
+      <p id="demo"></p>
+
+      Su nombre <input type="text" id="fname" onchange="upperCase()">
+      <p>Cuando dejes el input, se activa la funcion que convierte el texto a mayusculas.</p>
+
+      <script>
+        function upperCase() {
+          const x = document.getElementById("fname");
+          console.log(x.value);
+          x.value = x.value.toUpperCase();
+        }
+      </script>
+    </body>
+
+  </html>

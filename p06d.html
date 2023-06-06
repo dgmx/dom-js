@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="css/estilo.css">
+    <body>
+
+
+
+        <h2 id="id01">Antiguo Titulo</h2>
+
+        <p>JavaScript cambia "Antiguo Titulo" a "Titulo Nuevo".</p>
+
+        <script>
+            function cambiarTexto() {
+                const element = document.getElementById("id01");
+                element.innerHTML = "Titulo Nuevo";
+            }
+        </script>
+
+        <p>El parrafo superior cambia al ejecutar la funcion</p>
+
+        <input type="submit" onclick="cambiarTexto();">
+
+
+    </body>
+
+</html>
+

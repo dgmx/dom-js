@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="css/estilo.css">
+<body>
+
+<h2>JavaScript cambiando HTML</h2>
+
+<p id="p1">HOLA MUNDO</p>
+
+<script>
+    function cambiarTexto() {
+document.getElementById("p1").innerHTML = "HOLA MARCIANOS!";
+}
+</script>
+
+<p>El parrafo superior cambia al ejecutar la funcion</p>
+
+<input type="submit" onclick="cambiarTexto();">
+
+</body>
+</html>

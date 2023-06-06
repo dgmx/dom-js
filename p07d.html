@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="css/estilo.css">
+    <body>
+        <h2>Cambiando atributos como la URL de img</h2>
+        <p id="demo"></p>
+
+        <script>
+           
+        document.getElementById("demo").innerHTML = "Fecha : " + Date();
+        </script>
+        <img id="myImage" src="img/gato-negro.png">
+
+
+        <script>
+            function cambiarAtr() {
+                document.getElementById("myImage").src = "img/muneco-de-vudu.png";
+            }
+        </script>
+
+        <p>El atributo de img cambia al ejecutar la funcion y muestra la hora</p>
+
+        <input type="submit" onclick="cambiarAtr();">
+
+
+        </script>
+
+    </body>
+
+</html>

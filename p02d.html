@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="css/estilo.css">
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Parrafo[0]</p>
+<p>Parrafo 1 <b>getElementsByTagName</b> metodo.</p>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[1].innerHTML;
+
+</script>
+
+</body>
+</html>
